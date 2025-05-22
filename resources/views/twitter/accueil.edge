@@ -16,8 +16,8 @@
     />
   </head>
   <body class="bg-black text-white flex justify-center">
-
-    <nav class="space-y-8 p-4 w-[15%]">
+      {{--  navigations et profil  --}}
+   <nav class="space-y-8 p-4 w-[15%]">
 
       <div class="">
         <img src="{{ asset('images/Twitter.svg') }}" class="" alt="Home" />
@@ -61,7 +61,7 @@
         </div>
 
         <div>
-          <button class="bg-blue-500 px-8 py-2 hover:text-blue-900 rounded-full">
+          <button class="bg-blue-500 px-8 py-2 hover:text-blue-900 rounded-full active:scale-95 transition transform duration-150 ease-in-out">
             tweet
              </button>
         </div>
@@ -105,7 +105,7 @@
               <img src="/public/images/Timeline-Prop.svg" alt="Home" class="h-6 w-6" />
             </div>
           </section>
-
+           {{--  formulaire de tweet  --}}
           <section class="rounded  border-b text-gray-700 p-4">
             <div class="flex gap-4">
               <img src="{{ asset('images/Profile-Photo.png') }}" alt="Profile" class="w-12 h-12 rounded-full" />
@@ -116,7 +116,7 @@
                     <div class="flex items-start space-x-4">
                       <div class="flex-1">
                         <textarea name="tweet" placeholder="What’s happening?" 
-                          class="w-full rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                          class="w-full rounded-lg p-3 text-white focus:outline-none"></textarea>
                       </div>
                     </div>
                   </form>
@@ -125,12 +125,12 @@
 
                 <div class="flex justify-between items-center">
                   <div class="flex gap-3">
-                    <img src="/public/images/Top-Tweets.svg" class="w-8 h-8" alt="Media" />
-                    <img src="/public/images/gif.svg" class="w-8 h-8" alt="Gif" />
-                    <img src="/public/images/emoji.svg" class="w-8 h-8" alt="emoji" />
-                    <img src="/public/images/schedule.svg" class="w-8 h-8" alt="Schedule" />
+                    <img src="/public/images/Top-Tweets.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Media" />
+                    <img src="/public/images/gif.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Gif" />
+                    <img src="/public/images/emoji.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="emoji" />
+                    <img src="/public/images/schedule.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Schedule" />
                   </div>
-                  <button class="bg-blue-500 text-white px-6 py-2 hover:text-blue-900 rounded-full font-semibold">
+                  <button class="bg-blue-500 text-white px-6 py-2 hover:text-blue-900 rounded-full font-semibold active:scale-95 transition transform duration-150 ease-in-out">
                     Tweet
                         </button>
                 </div>
@@ -138,6 +138,10 @@
             </div>
           </section>
 
+          {{--  section de tout les differents tweet  --}}
+
+          
+           {{--  tweet cnn  --}}
           <section class="border-b text-gray-700 p-4">
             <div class="flex items-start  gap-2 ">
               <img src="{{ asset('images/Cnn.Png') }}" alt="Tweet Image" class="w-12 h-12 rounded-full" />
@@ -162,10 +166,12 @@
                 <div class="flex justify-between items-center text-gray-400 ">
 
                   <div class="flex items-center space-x-2">
+
                     <img src="{{ asset('images/Reply.svg') }}" alt="" class="w-4 h-4" />
-                    <p>
+                     <p>
                       57
                     </p>
+                    
                   </div>
 
                   <div class="flex items-center space-x-1">
@@ -176,7 +182,7 @@
                   </div>
 
                   <div class="flex items-center space-x-1">
-                    <img src="{{ asset('images/like.svg') }}" alt="" class="w-4 h-4" />
+                    <img src="{{ asset('images/like.svg') }}" alt="active:scale-95 transition transform duration-150 ease-in-out bg-red 900" class="w-4 h-4" />
                     <p>
                       184
                     </p>
@@ -191,7 +197,7 @@
 
             </div>
           </section>
-
+            {{--  tweet the new york times  --}}
           <section class=" border-b text-gray-700 p-4">
             <div class="flex items-start gap-2">
               <img src="{{ asset('images/timesquare.png') }}" alt="Tweet Image" class="w-12 h-12 rounded-full" />
@@ -244,7 +250,7 @@
 
               
           </section>
-
+             {{--  tweet twitter  --}}
           <section class="border-b text-gray-700 items-center   ">
             <div class="flex  gap-2 ">
               <img src="{{ asset('images/Tweet-couleur.png') }}" alt="" class="w-12 h-12 rounded-full" />
@@ -291,11 +297,11 @@
                     </div>
                   </div>
               </div>
-            </div>
 
-            
+            </div>
           </section>
 
+            {{--  tweet twitter  --}}
           <section class=" border-b-gray-700 ">
             <div class="flex items-start gap-2">
               <img src="{{ asset('images/Tweet-couleur.png') }}" alt="" class="w-12 h-12 rounded-full" />
@@ -347,7 +353,7 @@
           </section>
 
         </main>
-
+        {{--  section footer Trends for you  --}}
         <footer class=" flex-box p-4 w-[20%] ">
           <div class=" space-y-6">
 
@@ -418,7 +424,7 @@
                     </svg>
                   </div>
                 </div>
-
+                   
                 <div class="hover:bg-gray-800 p-2 rounded-lg transition">
                   <div class="flex justify-between items-start">
                     <div>
@@ -469,7 +475,7 @@
               </section>
 
             </div>
-
+             {{-- footer section Who to follow   --}}
             <section class="bg-gray-900 text-white rounded-xl p-4 space-y-4">
 
               <h3 class="text-xl font-bold">
@@ -494,7 +500,7 @@
                   </div>
 
                 </div>
-                <button class="bg-white text-black font-semibold px-4 py-1 rounded-full hover:bg-gray-300">Follow</button>
+                <button class="bg-white text-black font-semibold px-4 py-1 rounded-full hover:bg-gray-300 active:scale-95 transition transform duration-150 ease-in-out">Follow</button>
               </div>
 
               <div class="flex justify-between items-center hover:bg-gray-800 p-2 rounded-lg transition">
@@ -515,7 +521,7 @@
                   </div>
 
                 </div>
-                <button class="bg-white text-black font-semi-bold px-4 py-1 rounded-full hover:bg-gray-300">Follow</button>
+                <button class="bg-white text-black font-semi-bold px-4 py-1 rounded-full hover:bg-gray-300 active:scale-95 transition transform duration-150 ease-in-out">Follow</button>
               </div>
 
               <div class="flex justify-between items-center hover:bg-gray-800 p-2 rounded-lg transition">
@@ -535,7 +541,7 @@
                     </p>
                   </div>
                 </div>
-                <button class="bg-white text-black font-semi-bold px-4 py-1 rounded-full hover:bg-gray-300">Follow</button>
+                <button class="bg-white text-black font-semi-bold px-4 py-1 rounded-full hover:bg-gray-300 active:scale-95 transition transform duration-150 ease-in-out">Follow</button>
               </div>
 
               <a href="#" class="text-blue-500 hover:underline">Show more</a>

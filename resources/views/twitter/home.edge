@@ -1,0 +1,329 @@
+@layout.app({ title: "Welcome page title" })
+  @slot('meta')
+    <meta name="description" content="A welcome page made with EdgeJS">
+  @endslot
+
+  @slot('main')
+  <main class="border-x w-[30%] lg: md:block">
+    <div class="flex justify-center gap-6 ">
+
+      <div class=" space-y-6 mx-auto">
+
+        <section class="rounded border-b border-gray-700 p-4">
+          <div class="flex justify-between items-center">
+            <a href="#" class="text-white font-bold">Home</a>
+            <img src="/public/images/Timeline-Prop.svg" alt="Home" class="h-6 w-6" />
+          </div>
+        </section>
+         {{--  formulaire de tweet  --}}
+        <section class="rounded  border-b text-gray-700 p-4">
+              
+              <div class=" p-4 rounded-xl shadow-md w-full max-w-xl mx-auto">
+
+                <a href="#">
+                  <div class="flex gap-4">
+                    <img src="{{ asset('images/Profile-Photo.png') }}" alt="Profile" class="w-12 h-12 rounded-full" />
+                    <div class="flex-1">
+                </a>
+
+                <form action="#" method="POST">
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-1">
+                      <textarea name="tweet" placeholder="What’s happening?" 
+                        class="w-full rounded-lg p-3 text-white focus:outline-none"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-between items-center">
+                    <div class="flex gap-3">
+                      <img src="/public/images/Top-Tweets.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Media" />
+                      <img src="/public/images/gif.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Gif" />
+                      <img src="/public/images/emoji.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="emoji" />
+                      <img src="/public/images/schedule.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Schedule" />
+                    </div>
+                    <button class="bg-blue-500 text-white px-6 py-2 hover:text-blue-900 rounded-full font-semibold active:scale-95 transition transform duration-150 ease-in-out">
+                      Tweet
+                          </button>
+                  </div>
+
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        {{--  section de tout les differents tweet  --}}
+
+        
+         {{--  tweet cnn  --}}
+        <section class="border-b text-gray-700 p-4">
+          <div class="flex items-start  gap-2 ">
+            <img src="{{ asset('images/Cnn.Png') }}" alt="Tweet Image" class="w-12 h-12 rounded-full" />
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="text-white font-bold">
+                  CNN
+                </p>
+                <img src="{{ asset('images/Verified.svg') }}" alt="Tweet Image" class="w-4 h-4 rounded-full" />
+                <p>
+                  @CNN
+                  . 7m
+                </p>
+              </div>
+              <p class="text-white mt-2">
+                President Joe Biden touted a new agreement reached with the European Union 
+                      to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" 
+                      that would serve to both strengthen the US steel industry and combat the
+                      global climate crisis.
+              </p>
+
+              <div class="flex justify-between items-center text-gray-400 ">
+
+                <div class="flex items-center space-x-2">
+
+                  <img src="{{ asset('images/Reply.svg') }}" alt="" class="w-4 h-4" />
+                   <p>
+                    57
+                  </p>
+                  
+                </div>
+
+                <div class="flex items-center space-x-1">
+                  <img src="{{ asset('images/retweet.svg') }}" alt="" class="w-4 h-4" />
+                  <p>
+                    144
+                  </p>
+                </div>
+
+                <div class="flex items-center space-x-1">
+                  <img src="{{ asset('images/like.svg') }}" alt="active:scale-95 transition transform duration-150 ease-in-out bg-red 900" class="w-4 h-4" />
+                  <p>
+                    184
+                  </p>
+                </div>
+
+                <div>
+                  <img src="{{ asset('images/Share.svg') }}" alt="" class="w-4 h-4 " />
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+          {{--  tweet the new york times  --}}
+        <section class=" border-b text-gray-700 p-4">
+          <div class="flex items-start gap-2 ">
+            <img src="{{ asset('images/timesquare.png') }}" alt="Tweet Image" class="w-12 h-12 rounded-full" />
+            <div>
+                  <div class="flex items-center gap-2">
+                      <p class="text-white font-bold">
+                          The New York Time
+                      </p>
+                      <img src="{{ asset('images/Verified.svg') }}" alt="" class="w-4 h-4 rounded-full" />
+                      <p class="text-gray-700">
+                          @nytimes
+                          . 2h
+                      </p>
+                  </div>
+                  <p class="text-white mt-2">
+                      Gardening boomed during the pandemic. 
+                      Six Black writers share how it has helped them re-establish,
+                      and reimagine, a connection to cultivation and the land
+                  </p>
+                  <img src="{{ asset('images/fleur.png') }}" alt="" class="w-100 h-auto mt-2 " />
+
+                  <div class="flex justify-between space-x-25 mt-2 py-4  ">
+                      <div class="flex items-center space-x-1">
+                          <img src="{{ asset('images/Reply.svg') }}" alt="" class="w-4 h-4" />
+                          <p>
+                              19
+                          </p>
+                      </div>
+  
+                      <div class="flex items-center space-x-1">
+                          <img src="{{ asset('images/retweet.svg') }}" alt="" class="w-4 h-4" />
+                          <p>
+                              48
+                          </p>
+                      </div>
+  
+                      <div class="flex items-center space-x-1">
+                          <img src="{{ asset('images/like.svg') }}" alt="" class="w-4 h-4" />
+                          <p>
+                              482
+                          </p>
+                      </div>
+  
+                      <div>
+                          <img src="{{ asset('images/Share.svg') }}" alt="" class="w-4 h-4" />
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+            
+        </section>
+           {{--  tweet twitter  --}}
+        <section class=" border-b text-gray-700 p-4">
+          <div class="flex  items-start gap-2  ">
+            <img src="{{ asset('images/Tweet-couleur.png') }}" alt="" class="w-12 h-12 rounded-full" />
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="text-white font-bold">
+                  Twitter
+                </p>
+                <img src="{{ asset('images/Verified.svg') }}" alt="" class="w-4 h-4 rounded-full" />
+                <p class="text-gray-700">
+                  @Twitter
+                  . Oct 29
+                </p>
+              </div>
+              <p class="text-white mt-2">
+                BIG NEWS lol jk still Twitter
+              </p>
+
+              <div class="flex justify-between text-gray-400 space-x-25 mt-2 py-4 ">
+
+                  <div class="flex items-center space-x-1">
+                    <img src="{{ asset('images/Reply.svg') }}" alt="" class="w-4 h-4" />
+                    <p>
+                      6,8k
+                    </p>
+                  </div>
+    
+                  <div class="flex items-center space-x-1">
+                    <img src="{{ asset('images/retweet.svg') }}" alt="" class="w-4 h-4" />
+                    <p>
+                      36,6k
+                    </p>
+                  </div>
+    
+                  <div class="flex items-center space-x-1">
+                    <img src="{{ asset('images/like.svg') }}" alt="" class="w-4 h-4" />
+                    <p>
+                      267,1k
+                    </p>
+                  </div>
+    
+                  <div>
+                    <img src="{{ asset('images/Share.svg') }}" alt="" class="w-4 h-4" />
+                  </div>
+                </div>
+            </div>
+
+          </div>
+        </section>
+
+          {{--  tweet twitter  --}}
+        <section class=" border-b text-gray-700 p-4 ">
+          <div class="flex items-start gap-2">
+            <img src="{{ asset('images/Tweet-couleur.png') }}" alt="" class="w-12 h-12 rounded-full" />
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="text-white font-bold">
+                  Twitter
+                </p>
+                <img src="{{ asset('images/Verified.svg') }}" alt="" class="w-4 h-4 rounded-full" />
+                <p class="text-gray-700">
+                  @Twitter
+                  . Oct 4
+                </p>
+              </div>
+              <p class="text-white mt-2">
+                hello literally everyone
+              </p>
+
+              <div class="flex justify-between text-gray-400 space-x-25 mt-2 py-4">
+
+                <div class="flex items-center space-x-1">
+                  <img src="{{ asset('images/Reply.svg') }}" alt="" class="w-4 h-4" />
+                  <p>
+                    118.7kk
+                  </p>
+                </div>
+  
+                <div class="flex items-center space-x-1">
+                  <img src="{{ asset('images/retweet.svg') }}" alt="" class="w-4 h-4" />
+                  <p>
+                    785.4kk
+                  </p>
+                </div>
+  
+                <div class="flex items-center space-x-1">
+                  <img src="{{ asset('images/like.svg') }}" alt="" class="w-4 h-4" />
+                  <p>
+                    3.3M
+                  </p>
+                </div>
+   
+                <div>
+                  <img src="{{ asset('images/Share.svg') }}" alt="" class="w-5 h-5" />
+                </div>
+              </div>
+            </div>
+            </div>
+
+        </section>
+
+                    {{--  tweet twitter  --}}
+                    <section class=" border-b text-gray-700 p-4 ">
+                      <div class="flex items-start gap-2">
+                        <img src="{{ asset('images/Tweet-couleur.png') }}" alt="" class="w-12 h-12 rounded-full" />
+                        <div>
+                          <div class="flex items-center gap-2">
+                            <p class="text-white font-bold">
+                              Twitter
+                            </p>
+                            <img src="{{ asset('images/Verified.svg') }}" alt="" class="w-4 h-4 rounded-full" />
+                            <p class="text-gray-700">
+                              @Twitter
+                              . Oct 4
+                            </p>
+                          </div>
+                          <p class="text-white mt-2">
+                            hello literally everyone
+                          </p>
+          
+                          <div class="flex justify-between text-gray-400 space-x-25 mt-2 py-4">
+          
+                            <div class="flex items-center space-x-1">
+                              <img src="{{ asset('images/Reply.svg') }}" alt="" class="w-4 h-4"/>
+                              <p>
+                                118.7kk
+                              </p>
+                            </div>
+              
+                            <div class="flex items-center space-x-1">
+                              <img src="{{ asset('images/retweet.svg') }}" alt="" class="w-4 h-4"/>
+                              <p>
+                                785.4kk
+                              </p>
+                            </div>
+              
+                            <div class="flex items-center space-x-1">
+                              <img src="{{ asset('images/like.svg') }}" alt="" class="w-4 h-4"/>
+                              <p>
+                                3.3M
+                              </p>
+                            </div>
+               
+                            <div>
+                              <img src="{{ asset('images/Share.svg') }}" alt="" class="w-5 h-5" />
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+          
+                    </section>
+
+      </main>
+  @endslot
+@end
+
+
+
+
+
+

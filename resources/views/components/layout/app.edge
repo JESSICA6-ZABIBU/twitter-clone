@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ title || "Your default title" }}</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+      
+  </script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  @if ($slots.meta)
+    {{{ await $slots.meta() }}}
+  @endif
+</head>
+<body class="bg-black text-white flex justify-center">
+
+    {{--  navigations et profil  --}}
+   <nav class="space-y-8 p-4 md:w-[15%] lg:[20%] hidden md:block lg:block ">
+    <a href="#">
+     <div class="sticky top-0 z-50 shadow-md ">
+       <div >
+         <img src="{{ asset('images/Twitter.svg') }}" class="p-4" alt="Home" />
+       </div>
+ 
+       <div class="space-y-6">
+ 
+         <div class="flex justify between gap-2">
+           <img src="{{ asset('images/Home-Fill.svg') }}" class="gap-2" alt="Home" />
+           <a class="hover:text-blue-400 hidden lg:block" href="id-home">Home</a>
+         </div>
+ 
+         <div class="flex justify between  gap-2">
+           <img src="{{ asset('images/Notifications-Fill.svg') }}" class="gap-2" alt="Home" />
+           <a class="hover:text-blue-400 hidden lg:block" href="id-notification">Notification</a>
+         </div>
+ 
+         <div class="flex justify between  gap-2">
+           <img src="{{ asset('images/Messages-Fill.svg') }}" class="gap-2" alt="Home" />
+           <a class="hover:text-blue-400 hidden lg:block" href="id-message">Messages</a>
+         </div>
+ 
+         <div class="flex justify between  gap-2">
+           <img src="{{ asset('images/Bookmarks-Fill.svg') }}" class="gap-2" alt="Home" />
+           <a class="hover:text-blue-400 hidden lg:block" href="id-bookmarks ">Bookmarks </a>
+         </div>
+ 
+         <div class="flex justify between  gap-2">
+           <img src="/public/images/Lists-Fill.svg" class="" alt="Home" />
+           <a class="hover:text-blue-400 hidden lg:block" href="id-lists">Lists</a>
+         </div>
+ 
+         <div class="flex justify between gap-2">
+           <img src="{{ asset('images/Profile-Fill.svg') }}" class="" alt="Home" />
+           <a class="hover:text-blue-400 hidden lg:block" href="id-profile">Profile</a>
+         </div>
+ 
+         <div class="flex justify between gap-2">
+           <img src="{{ asset('images/More.svg') }}" class="" alt="Home" />
+           <a class="hover:text-blue-400" href="id-more">More</a>
+         </div>
+    </a>
+       <div>
+         <button class="bg-blue-500 px-8 py-2 hover:text-blue-900 rounded-full active:scale-95 transition transform duration-150 ease-in-out">
+           tweet
+            </button>
+       </div>
+     </div>
+   </div>
+
+   <!-- Bloc image + nom utilisateur -->
+   <div class="mt-140">
+     <div class="bg-black text-white flex items-center justify-between p-4 rounded-full my-12">
+       
+       <a href="#">
+         <div class="flex items-center gap-3">
+           {{--  rendre le profil en lien  --}}
+           <div class="flex flex-col leading-tight">
+             <div class="flex items-center gap-1">
+               <img src="/images/Profile-Photo.png" alt="Photo de profil" class="w-8 h-8 rounded-full">
+               <p class="font-semibold text-sm">Bradley Ortiz</p>
+               <img src="/public/images/Private.svg" alt="Icône privée" class="w-4 h-4" />
+             </div>
+             <p class="text-gray-400 text-sm">@bradley_</p>
+           </div>
+         </div>
+
+       </a>
+       <!-- Menu 3 points -->
+       <svg class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+         <circle cx="5" cy="12" r="2" />
+         <circle cx="12" cy="12" r="2" />
+         <circle cx="19" cy="12" r="2" />
+       </svg>
+     </div>
+   </div>
+</nav>
+
+  {{{ await $slots.main() }}}
+
+  {{--  section footer Trends for you  --}}
+  <footer class=" flex-box p-4 w-[20%] ">
+    <div class=" space-y-6">
+
+      <section>
+        <div class="relative w-full">
+          <img
+            src="{{ asset('images/Search.svg') }}"
+            alt="Search"
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+          />
+          <fieldset class="">
+              <input
+              type="text"
+              placeholder="Search Twitter"
+              class=" bg-gray-900 text-white rounded-full py-2 pl-10 pr-4 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+            />
+          </fieldset>
+        </div>
+
+      </section>
+
+      <div class="space-y-6">
+        <section class="bg-gray-900 text-white rounded-xl p-4 space-y-4">
+          <div class="flex justify-between items-center">
+            <h2 class="text-xl font-bold">
+              Trends for you
+            </h2>
+            <img src="{{ asset('images/Settings.svg') }}" alt="" class="w-4 h-4 rounded-full" />
+          </div>
+
+          <div class="hover:bg-gray-800 p-2 rounded-lg transition">
+            <div class="flex justify-between items-start">
+               <div>
+                   <p class="text-sm text-gray-400">
+                    Trending in Turkey
+                   </p>
+                   <p class="font-bold"> #SQUID </p>
+                <p class="text-sm text-gray-400">
+                  2,066 Tweets</p>
+               </div>
+
+               <!-- Menu 3 points -->
+               <svg class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="5" cy="12" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="19" cy="12" r="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="hover:bg-gray-800 p-2 rounded-lg transition">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-sm text-gray-400">
+                  Trending in Turkey
+                </p>
+                <p class="font-bold">
+                  #SQUID
+                </p>
+                <p class="text-sm text-gray-400">
+                  2,066 Tweets
+                </p>
+              </div>
+              <svg class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="5" cy="12" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="19" cy="12" r="2" />
+              </svg>
+            </div>
+          </div>
+             
+          <div class="hover:bg-gray-800 p-2 rounded-lg transition">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-sm text-gray-400">
+                  Trending in Turkey
+                </p>
+                <p class="font-bold">
+                  #SQUID
+                </p>
+                <p class="text-sm text-gray-400">
+                  2,066 Tweets
+                </p>
+              </div>
+
+              <!-- Menu 3 points -->
+              <svg class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="5" cy="12" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="19" cy="12" r="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="hover:bg-gray-800 p-2 rounded-lg transition">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-sm text-gray-400">
+                  Trending in Turkey
+                </p>
+                <p class="font-bold">
+                  #SQUID
+                </p>
+                <p class="text-sm text-gray-400">
+                  2,066 Tweets
+                </p>
+              </div>
+
+              <!-- Menu 3 points -->
+              <svg class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="5" cy="12" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="19" cy="12" r="2" />
+              </svg>
+            </div>
+          </div>
+
+          <a href="#" class="text-blue-500 hover:underline text-sm">Show more</a>
+        </section>
+
+      </div>
+       {{-- footer section Who to follow   --}}
+      <section class="bg-gray-900 text-white rounded-xl p-4 space-y-4">
+
+        <h3 class="text-xl font-bold">
+          Who to follow
+        </h3>
+
+        <div class="flex justify-between items-center hover:bg-gray-800 p-2 rounded-lg transition">
+
+          <div class="flex items-center space-x-3">
+            <img src="{{ asset('images/timesquare.png') }}" alt="" class="w-10 h-10 rounded-full" />
+            <div>
+              <div class="flex justify-center items-center ">
+                <p class="font-bold">
+                  The New York Time
+                </p>
+                <img src="{{ asset('images/Verified.svg') }}" alt="" class="w-4 h-4 rounded-full" />
+              </div>
+              <p class="text-gray-400 text-sm">
+                @nytimes
+              </p>
+
+            </div>
+
+          </div>
+          <button class="bg-white text-black font-semibold px-4 py-1 rounded-full hover:bg-gray-300 active:scale-95 transition transform duration-150 ease-in-out">Follow</button>
+        </div>
+
+        <div class="flex justify-between items-center hover:bg-gray-800 p-2 rounded-lg transition">
+
+          <div class="flex items-center space-x-3">
+            <img src="{{ asset('images/Cnn.Png') }}" alt="Profile" class="w-10 h-10 rounded-full" />
+            <div>
+
+              <div class="flex justify-center items-center ">
+                <p class="font-bold">
+                  CNN
+                </p>
+                <img src="{{ asset('images/Verified.svg') }}" alt="" class="w-4 h-4 rounded-full" />
+              </div>
+              <p class="text-gray-400 text-sm">
+                @CNN
+              </p>
+            </div>
+
+          </div>
+          <button class="bg-white text-black font-semi-bold px-4 py-1 rounded-full hover:bg-gray-300 active:scale-95 transition transform duration-150 ease-in-out">Follow</button>
+        </div>
+
+        <div class="flex justify-between items-center hover:bg-gray-800 p-2 rounded-lg transition">
+
+          <div class="flex items-center space-x-3">
+            <img src="{{ asset('images/Twitter.svg') }}" alt="" class="w-10 h-10 rounded-full" />
+            <div>
+              <div class="flex justify-center items-center ">
+                <p class="font-bold">
+                  Twitter
+                </p>
+                <img src="{{ asset('images/Verified.svg') }}" alt="" class="w-4 h-4 rounded-full" />
+              </div>
+
+              <p class="text-gray-400 text-sm">
+                @Twitter
+              </p>
+            </div>
+          </div>
+          <button class="bg-white text-black font-semi-bold px-4 py-1 rounded-full hover:bg-gray-300 active:scale-95 transition transform duration-150 ease-in-out">Follow</button>
+        </div>
+
+        <a href="#" class="text-blue-500 hover:underline">Show more</a>
+      </section>
+      <p class="text-gray-700">
+        Terms of Service Privacy PolicyCookie Policy Imprint Ads infoMore ... © 2021 Twitter, Inc.
+      </p>
+    </footer>
+
+
+</body>
+</html>

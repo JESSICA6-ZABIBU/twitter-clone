@@ -18,49 +18,49 @@
   <body class="bg-black text-white flex justify-center">
       {{--  navigations et profil  --}}
    <nav class="space-y-8 p-4 w-[15%] ">
-
-      <div class="sticky top-0 z-50 shadow-md ">
-        <div >
-          <img src="{{ asset('images/Twitter.svg') }}" class="p-4" alt="Home" />
-        </div>
-  
-        <div class="space-y-6">
-  
-          <div class="flex justify between gap-2">
-            <img src="{{ asset('images/Home-Fill.svg') }}" class="gap-2" alt="Home" />
-            <a class="hover:text-blue-400" href="id-home">Home</a>
+       <a href="#">
+        <div class="sticky top-0 z-50 shadow-md ">
+          <div >
+            <img src="{{ asset('images/Twitter.svg') }}" class="p-4" alt="Home" />
           </div>
-  
-          <div class="flex justify between  gap-2">
-            <img src="{{ asset('images/Notifications-Fill.svg') }}" class="gap-2" alt="Home" />
-            <a class="hover:text-blue-400" href="id-notification">Notification</a>
-          </div>
-  
-          <div class="flex justify between  gap-2">
-            <img src="{{ asset('images/Messages-Fill.svg') }}" class="gap-2" alt="Home" />
-            <a class="hover:text-blue-400" href="id-message">Messages</a>
-          </div>
-  
-          <div class="flex justify between  gap-2">
-            <img src="{{ asset('images/Bookmarks-Fill.svg') }}" class="gap-2" alt="Home" />
-            <a class="hover:text-blue-400" href="id-bookmarks ">Bookmarks </a>
-          </div>
-  
-          <div class="flex justify between  gap-2">
-            <img src="/public/images/Lists-Fill.svg" class="" alt="Home" />
-            <a class="hover:text-blue-400" href="id-lists">Lists</a>
-          </div>
-  
-          <div class="flex justify between gap-2">
-            <img src="{{ asset('images/Profile-Fill.svg') }}" class="" alt="Home" />
-            <a class="hover:text-blue-400" href="id-profile">Profile</a>
-          </div>
-  
-          <div class="flex justify between gap-2">
-            <img src="{{ asset('images/More.svg') }}" class="" alt="Home" />
-            <a class="hover:text-blue-400" href="id-more">More</a>
-          </div>
-  
+    
+          <div class="space-y-6">
+    
+            <div class="flex justify between gap-2">
+              <img src="{{ asset('images/Home-Fill.svg') }}" class="gap-2" alt="Home" />
+              <a class="hover:text-blue-400" href="id-home">Home</a>
+            </div>
+    
+            <div class="flex justify between  gap-2">
+              <img src="{{ asset('images/Notifications-Fill.svg') }}" class="gap-2" alt="Home" />
+              <a class="hover:text-blue-400" href="id-notification">Notification</a>
+            </div>
+    
+            <div class="flex justify between  gap-2">
+              <img src="{{ asset('images/Messages-Fill.svg') }}" class="gap-2" alt="Home" />
+              <a class="hover:text-blue-400" href="id-message">Messages</a>
+            </div>
+    
+            <div class="flex justify between  gap-2">
+              <img src="{{ asset('images/Bookmarks-Fill.svg') }}" class="gap-2" alt="Home" />
+              <a class="hover:text-blue-400" href="id-bookmarks ">Bookmarks </a>
+            </div>
+    
+            <div class="flex justify between  gap-2">
+              <img src="/public/images/Lists-Fill.svg" class="" alt="Home" />
+              <a class="hover:text-blue-400" href="id-lists">Lists</a>
+            </div>
+    
+            <div class="flex justify between gap-2">
+              <img src="{{ asset('images/Profile-Fill.svg') }}" class="" alt="Home" />
+              <a class="hover:text-blue-400" href="id-profile">Profile</a>
+            </div>
+    
+            <div class="flex justify between gap-2">
+              <img src="{{ asset('images/More.svg') }}" class="" alt="Home" />
+              <a class="hover:text-blue-400" href="id-more">More</a>
+            </div>
+       </a>
           <div>
             <button class="bg-blue-500 px-8 py-2 hover:text-blue-900 rounded-full active:scale-95 transition transform duration-150 ease-in-out">
               tweet
@@ -73,18 +73,20 @@
       <div class="mt-140">
         <div class="bg-black text-white flex items-center justify-between p-4 rounded-full my-12">
           
-          <div class="flex items-center gap-3">
-            {{--  rendre le profil en lien  --}}
-            <a href="'/'"> <img src="/images/Profile-Photo.png" alt="Photo de profil" class="w-8 h-8 rounded-full"></a>
-            <div class="flex flex-col leading-tight">
-              <div class="flex items-center gap-1">
-                <p class="font-semibold text-sm">Bradley Ortiz</p>
-                <img src="/public/images/Private.svg" alt="Icône privée" class="w-4 h-4" />
+          <a href="#">
+            <div class="flex items-center gap-3">
+              {{--  rendre le profil en lien  --}}
+              <div class="flex flex-col leading-tight">
+                <div class="flex items-center gap-1">
+                  <img src="/images/Profile-Photo.png" alt="Photo de profil" class="w-8 h-8 rounded-full">
+                  <p class="font-semibold text-sm">Bradley Ortiz</p>
+                  <img src="/public/images/Private.svg" alt="Icône privée" class="w-4 h-4" />
+                </div>
+                <p class="text-gray-400 text-sm">@bradley_</p>
               </div>
-              <p class="text-gray-400 text-sm">@bradley_</p>
             </div>
-          </div>
-
+  
+          </a>
           <!-- Menu 3 points -->
           <svg class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
             <circle cx="5" cy="12" r="2" />
@@ -121,21 +123,22 @@
                           class="w-full rounded-lg p-3 text-white focus:outline-none"></textarea>
                       </div>
                     </div>
+
+                    <div class="flex justify-between items-center">
+                      <div class="flex gap-3">
+                        <img src="/public/images/Top-Tweets.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Media" />
+                        <img src="/public/images/gif.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Gif" />
+                        <img src="/public/images/emoji.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="emoji" />
+                        <img src="/public/images/schedule.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Schedule" />
+                      </div>
+                      <button class="bg-blue-500 text-white px-6 py-2 hover:text-blue-900 rounded-full font-semibold active:scale-95 transition transform duration-150 ease-in-out">
+                        Tweet
+                            </button>
+                    </div>
+
                   </form>
                 </div>
                 
-
-                <div class="flex justify-between items-center">
-                  <div class="flex gap-3">
-                    <img src="/public/images/Top-Tweets.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Media" />
-                    <img src="/public/images/gif.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Gif" />
-                    <img src="/public/images/emoji.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="emoji" />
-                    <img src="/public/images/schedule.svg" class="w-8 h-8 active:scale-95 transition transform duration-150 ease-in-out" alt="Schedule" />
-                  </div>
-                  <button class="bg-blue-500 text-white px-6 py-2 hover:text-blue-900 rounded-full font-semibold active:scale-95 transition transform duration-150 ease-in-out">
-                    Tweet
-                        </button>
-                </div>
               </div>
             </div>
           </section>
@@ -327,21 +330,21 @@
                   <div class="flex items-center space-x-1">
                     <img src="{{ asset('images/Reply.svg') }}" alt="" class="w-4 h-4" />
                     <p>
-                      30k
+                      118.7kk
                     </p>
                   </div>
     
                   <div class="flex items-center space-x-1">
                     <img src="{{ asset('images/retweet.svg') }}" alt="" class="w-4 h-4" />
                     <p>
-                      296,6k
+                      785.4kk
                     </p>
                   </div>
     
                   <div class="flex items-center space-x-1">
                     <img src="{{ asset('images/like.svg') }}" alt="" class="w-4 h-4" />
                     <p>
-                      500k
+                      3.3M
                     </p>
                   </div>
      
@@ -353,6 +356,57 @@
               </div>
 
           </section>
+
+                      {{--  tweet twitter  --}}
+                      <section class=" border-b-gray-700 ">
+                        <div class="flex items-start gap-2">
+                          <img src="{{ asset('images/Tweet-couleur.png') }}" alt="" class="w-12 h-12 rounded-full" />
+                          <div>
+                            <div class="flex items-center gap-2">
+                              <p class="text-white font-bold">
+                                Twitter
+                              </p>
+                              <img src="{{ asset('images/Verified.svg') }}" alt="" class="w-4 h-4 rounded-full" />
+                              <p class="text-gray-700">
+                                @Twitter
+                                . Oct 4
+                              </p>
+                            </div>
+                            <p class="text-white mt-2">
+                              hello literally everyone
+                            </p>
+            
+                            <div class=" flex justify-between  items-center text-gray-400 space-x-6 mt-2">
+            
+                              <div class="flex items-center space-x-1">
+                                <img src="{{ asset('images/Reply.svg') }}" alt="" class="w-4 h-4" />
+                                <p>
+                                  118.7kk
+                                </p>
+                              </div>
+                
+                              <div class="flex items-center space-x-1">
+                                <img src="{{ asset('images/retweet.svg') }}" alt="" class="w-4 h-4" />
+                                <p>
+                                  785.4kk
+                                </p>
+                              </div>
+                
+                              <div class="flex items-center space-x-1">
+                                <img src="{{ asset('images/like.svg') }}" alt="" class="w-4 h-4" />
+                                <p>
+                                  3.3M
+                                </p>
+                              </div>
+                 
+                              <div>
+                                <img src="{{ asset('images/Share.svg') }}" alt="" class="w-4 h-4" />
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+            
+                      </section>
 
         </main>
         {{--  section footer Trends for you  --}}

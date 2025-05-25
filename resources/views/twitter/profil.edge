@@ -65,12 +65,11 @@
   @endslot
 
   @slot('main')
-    <main class="md:border-x w-full max-auto lg:w-[30%] flex justify-center border">
+    <main class="md:border-x w-full max-auto lg:w-[30%] flex justify-center border-b ">
       <div class="flex justify-center gap-6">
         <div class="space-y-6">
 
           {{-- profil et photo de couverture  --}}
-          <section class="rounded md:block lg:block border-b text-gray-700">
             <div class="relative bg-center bg-cover " style="background-image: url('images/fleur.png')"> 
               <section class="bg-black/80 z-10 py-4 bg-transparant md:sticky lg:sticky rounded md:block lg:block border-b border-gray-700 p-4">
                 <div class="flex  ">
@@ -78,31 +77,108 @@
                     <i class="bi bi-arrow-left text-white"></i>
                   </div>
   
-                  <div class="flex flex-col">
+                  <div class="flex flex-col px-4">
+
                     <a href="#" class="text-white font-bold">Jessica Zabibu</a>
                     <span>50 tweets</span>
-                    <img src="/public/images/Timeline-Prop.svg" alt="Home" class="md:hidden h-6 w-6 md:w-48"/>
+  
                   </div>
+
+                </div> 
+                <div class="flex justify-content">
+                  <img src="/public/images/Search.svg" alt="Home" class="md:hidden h-6 w-6 md:w-48"/>
                 </div>
+
               </section>
+
               <div class="relative px-4 py-14" >
                 <div class="absolute top-22">
-                  <img src="/public/images/Tweet-couleur.png" class="w-40 h-40" alt="">
+                  <img src="/public/images/jess.JPEG" class="w-40 h-40 rounded-full" alt="">
                 </div>
 
               </div>
             </div>
             <div class="flex justify-end mt-4">
-              <span class="border border-gray-500 px-4 mr-4 rounded-full">
+              <span class="border border-gray-00 px-4 mr-4 rounded-full">
                 edit profile
               </span>
             </div>
-            <div class="mt-40 px-18 py-6">
-              <p>Lorem, ipsum dolor sitamet consectetur adipisicing elit. Facilis id esse excepturi sunt veniam assumenda alias? Corporis reprehenderit earum odio laboriosam, recusandae adipisci excepturi illo esse aliquam hic consequuntur ullam.</p>
+
+            <div class="p-4 mt-20">
+              <div>
+
+                <div class="flex gap-2">
+                  <p class="text-white font-bold ">Jessica Zabibu</p> 
+                  <img src="/public/images/Verified.svg" class="" alt="">
+                  <span class="text-bleu font-bold">obtenez la certification </span>
+
+                </div>
+                <p class="text-gray-500">@Jessica</p>
+              </div>
+            
+              <div>
+               
+                <p class="">
+                  Développeuse Web Full Stack
+                   Spécialisée en tailwindcss| AdonisJS | Javascript | PostgreSQL|
+                   Conception d’interfaces modernes & d’architectures robustes
+                   Basée à lubumbashi Disponible pour missions freelance
+                </p>
+              </div>
+
+              <div class="flex gap-4 mt-2 ">
+                <div>
+                  <span class="font-bold">99.7k</span>     <span class="text-gray-400">Abonnés</span>
+                </div>
+                <div>
+                  <span class="font-bold">180</span>     <span class="text-gray-400">Abonnements</span>
+                </div>
+      
+              </div>
+
+             <div class=" mt-2">
+                <div class="flex justify-beetween gap-4 font-bold  ">
+
+                 <div class="font-medium hover:shadow-lg hover:underline hover:decoration-blue-500 transition duration-300
+                   underline decoration-transparent active:decoration-blue-60">
+                  <a href="#">Post</a>
+                 </div>
+
+                 <div class="font-medium hover:shadow-lg hover:underline hover:decoration-blue-500 transition duration-300
+                   underline decoration-transparent active:decoration-blue-60 ">
+                  <a href="#">Reponse</a>
+                 </div>
+
+                 <div class="font-medium hover:shadow-lg hover:underline hover:decoration-blue-500 transition duration-300
+                    underline decoration-transparent active:decoration-blue-60 ">
+                  <a href="#">Tweets marquants</a>
+                 </div>
+
+                  <div class="font-medium hover:shadow-lg hover:underline hover:decoration-blue-500 transition duration-300
+                   underline decoration-transparent active:decoration-blue-60 ">
+                    <a href="#">Articles</a>
+                  </div>
+                  
+                  <div class="font-medium hover:shadow-lg hover:underline hover:decoration-blue-500 transition duration-300
+                   underline decoration-transparent active:decoration-blue-60 ">
+                    <a href="#">Medias</a>
+                  </div>
+                  
+                  <div class="font-medium hover:shadow-lg hover:underline hover:decoration-blue-500 transition duration-300
+                   underline decoration-transparent active:decoration-blue-60 ">
+                    <a href="#">J'aime</a>
+                  </div>
+
+               </div>
+
+              </div>
+              
             </div>
+
           </section>
 
           {{-- section de tous les tweets --}}
+
           {{-- tweet cnn --}}
           <section class="border-b md:block lg:block text-gray-700 p-4">
             <div class="flex items-start gap-2 ">

@@ -8,6 +8,8 @@
 */
 
 import router from '@adonisjs/core/services/router'
-router.on('/').render('twitter/profil')
-router.on('/').render('twitter/profil')
-router.on('/').render('twitter/profil')
+router.on('/').render('twitter/home')
+router.get('/home','#controllers/twitter_controller.home')
+router.get('/profil','#controllers/twitter_controller.profil')
+
+router.get('/', '#controllers/short_urls_controller.index')

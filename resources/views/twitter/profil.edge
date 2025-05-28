@@ -67,10 +67,10 @@
   @slot('main')
     <main class="md:border-x w-full max-auto lg:w-[30%] flex justify-center border-b ">
       <div class="flex justify-center gap-6">
-        <div class="space-y-6">
+        <div class="space-y-6 border-b border-gray-700">
 
           {{-- profil et photo de couverture  --}}
-            <div class="relative bg-center bg-cover " style="background-image: url('images/fleur.png')"> 
+            <div class="relative bg-center bg-cover  " style="background-image: url('images/fleur.png')"> 
               <section class="bg-black/80 z-10 py-4 bg-transparant md:sticky lg:sticky rounded md:block lg:block border-b border-gray-700 p-4">
                 <div class="flex  ">
                   <div>
@@ -84,31 +84,28 @@
   
                   </div>
 
+                  <div class="flex justify-between absolute right-0 ">
+
+                    <div class="">
+                      <img src="/public/images/Search.svg" alt="Home" class="md:hidden h-6 w-6 md:w-48"/>
+                    </div>
+                    <div>
+                      <svg class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer md:hidden" fill="currentColor" viewBox="0 0 24 24">
+                        <circle cx="12" cy="5" r="2" />
+                        <circle cx="12" cy="12" r="2" />
+                        <circle cx="12" cy="19" r="2" />
+                        </svg>
+                    </div>
+  
+                  </div>
+
                 </div> 
-                <div class="flex  flex-row-reverse ">
-
-                  <div class="">
-                    <img src="/public/images/Search.svg" alt="Home" class="md:hidden h-6 w-6 md:w-48"/>
-                  </div>
-                  <div>
-                    <svg class="w-6 h-6 text-gray-400 hover:text-white cursor-pointer md:hidden" fill="currentColor" viewBox="0 0 24 24">
-                      <circle cx="12" cy="5" r="2" />
-                      <circle cx="12" cy="12" r="2" />
-                      <circle cx="12" cy="19" r="2" />
-                      </svg>
-                  </div>
-
-                </div>
-                
-                  
-                  
-                
 
               </section>
 
-              <div class="relative px-4 py-14" >
+              <div class="relative px-4 py-16" >
                 <div class="absolute top-22">
-                  <img src="/public/images/jess.JPEG" class="w-40 h-40 rounded-full" alt="">
+                  <img src="/public/images/jess.JPEG" class="w-30 h-30 rounded-full" alt="">
                 </div>
 
               </div>
@@ -119,7 +116,7 @@
               </span>
             </div>
 
-            <div class="p-4 mt-20">
+            <div class="p-4 mt-2">
               <div>
 
                 <div class="flex gap-2">
@@ -161,7 +158,7 @@
 
                  <div class="font-medium hover:shadow-lg hover:underline hover:decoration-blue-500 transition duration-300
                    underline decoration-transparent active:decoration-blue-60 ">
-                  <a href="#">Reponse</a>
+                  <a href="#">Response</a>
                  </div>
 
                  <div class="font-medium hover:shadow-lg hover:underline hover:decoration-blue-500 transition duration-300
@@ -183,12 +180,14 @@
                    underline decoration-transparent active:decoration-blue-60 ">
                     <a href="#">J'aime</a>
                   </div>
+                  
 
                </div>
 
               </div>
-              
-            </div>
+             
+            </div> 
+            <div class="border-b text-gray-700"></div>
 
           </section>
 

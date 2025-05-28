@@ -9,4 +9,4 @@
 
 import router from '@adonisjs/core/services/router'
 
-router.on('/').render('twitter/profil')
+router.on('/').render('twitter/home')

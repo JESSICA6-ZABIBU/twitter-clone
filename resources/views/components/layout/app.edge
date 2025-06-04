@@ -19,16 +19,16 @@
   <body class="bg-black text-white md:flex justify-center md:px-8 lg:px-16 xl:px-32 ">
 
     {{--  navigations et profil  --}}
-    <nav class="p-4 w-[20%] hidden md:hidden flex ">
+    <nav class="p-4 w-[30%] flex ">
       <a href="#">
-        <div class="sticky top-0 z-50 shadow-md ">
+        <div class="sticky top-1 z-70 shadow-md  ">
           <div>
-            <img src="{{ asset('images/Twitter.svg') }}" class="p-4" alt="Home" />
+            <img src="{{ asset('images/Twitter.svg') }}" class="gap-2" alt="Home" />
           </div>
 
           <div class="space-y-6">
 
-            <div class="flex justify between gap-2">
+            <div class="flex justify between ga-2">
               <img src="{{ asset('images/Home-Fill.svg') }}" class="gap-2" alt="Home" />
               <a class="hover:text-blue-400 hidden lg:block" href="id-home">Home</a>
             </div>
@@ -111,7 +111,7 @@
 
     {{{ await $slots.main() }}}
     {{--  section footer Trends for you  --}}
-    <footer class=" flex-box p-4 w-[20%] hidden md:hidden lg:block pl-4 md:pl-6 lg:pl-10 py-4 text-sm text-gray-500">
+    <footer class="flex-box p-10 w-[30%] hidden md:hidden lg:block pl-4 md:pl-6 lg:pl-10 py-4 text-sm text-gray-500">
       <div class=" space-y-4">
 
         <section>
